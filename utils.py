@@ -22,6 +22,7 @@ def divide(a: int, b: int) -> float:
     """Return the quotient of a divided by b."""
     return a / b
 
+
 def to_binary(n):
     """Return the binary of number n."""
     if not isinstance(n, int):
