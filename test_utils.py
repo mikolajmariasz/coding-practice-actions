@@ -39,10 +39,10 @@ def test_binary_conversion_valid(n, expected):
 
 @pytest.mark.parametrize("n", [-1, 101, 1000])
 def test_binary_out_of_range(n):
-    with pytest.raises(ValueError, match="Liczba poza dozwolonym zakresem"):
+    with pytest.raises(ValueError, match="Number is out of range"):
         utils.to_binary(n)
 
 @pytest.mark.parametrize("n", [1.5, 10.1, 99.9])
 def test_binary_not_integer(n):
-    with pytest.raises(TypeError, match="Liczba nie jest liczbą naturalną"):
+    with pytest.raises(TypeError, match="Number is not natural"):
         utils.to_binary(n)
